@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  ruby_runner:
+    build: 
+      context: .
+    container_name: ruby_runner_container
+    image: ruby_runner
+    tty: true
+    env_file:
+      .env
+    volumes:
+      - type: bind
+        source: "${PWD}"
+        target: /app
+    entrypoint: ["ruby", "run.rb"]
