@@ -18,3 +18,9 @@
 
 ## Connect to SQLite DB:
 * `sqlite3 database.db`
+
+### Show Databases:
+* `.databases`
+
+### Show Tables:
+* `.tables`

@@ -2,9 +2,21 @@ require "byebug"
 require "pry-byebug"
 require "active_record"
 
-val = ActiveRecord::Base.establish_connection(
+ActiveRecord::Base.establish_connection(
     adapter: "sqlite3",
     database: "./database.db"
 )
-binding.pry
-puts "test"
+
+def create
+  ActiveRecord::Schema.define do
+    create_table :test_table, force: true do |t|
+      t.string :first
+      t.string :last
+      t.datetime :year_born
+    end
+  end
+end
+
+create
+
+puts "script ended..."
