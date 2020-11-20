@@ -14,7 +14,7 @@
 * `docker build -t ruby_runner .`
 
 ### Run the container:
-* `docker run -it --rm --env-file ./.env --mount type=bind,source="$(pwd)"/,target=/app ruby_runner run.rb`
+* `docker run -it --rm --env-file ./.env --mount type=bind,source="$(pwd)"/,target=/app ruby_runner [path to ruby file]`
 
 ## Connect to SQLite DB:
 * `sqlite3 database.db`
