@@ -24,3 +24,9 @@
 
 ### Show Tables:
 * `.tables`
+
+### Describe Table:
+* `pragma table_info(table_name)`
+
+### Exit Sqlite Command Prompt:
+* `.quit`
