@@ -29,3 +29,9 @@
 
 ### Exit Sqlite Command Prompt:
 * `.quit`
+
+### Run a Program:
+* `./run_program.sh my_program.rb`
+
+### Run a Script:
+* `./run_script.sh my_script.rb`

@@ -1,3 +1,6 @@
 .env
 .idea
 programs/database.db
+
+# Temporary code that should not be added to the repo:
+scripts/*
