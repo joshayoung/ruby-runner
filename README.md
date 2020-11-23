@@ -8,7 +8,6 @@
 * `docker-compose up && docker-compose rm -fsv`
   * This runs the container once and then removes it.
 
-
 ## Without docker-compose:
 ### Build the container:
 * `docker build -t ruby_runner .`
