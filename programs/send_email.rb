@@ -19,6 +19,8 @@ def vault_credentials
 end
 
 def email_address
+  return ENV["EMAIL_TO"] if (ENV["EMAIL_TO"] != nil && ENV["EMAIL_TO"] != "")
+
   "#{vault_credentials[:email_user_name]}@#{ENV['EMAIL_DOMAIN']}"
 end
 
