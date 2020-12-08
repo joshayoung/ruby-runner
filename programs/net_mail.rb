@@ -20,26 +20,13 @@ def vault_credentials
 end
 
 message = <<MESSAGE_END
-From: Private Person <me@fromdomain.com>
-To: A Test User <test@todomain.com>
-Subject: SMTP e-mail test
+From: Josh Young <josh.young@daveramsey.com>
+To: Josh Young <josh.young@daveramsey.com>
+Subject: Test Email Send
 
-This is a test e-mail message.
+Does this get sent?
 MESSAGE_END
 
-# Net::SMTP.start('smtp.office365.com', 465, 'localhost', '', '', :plain) do |smtp|
-# s.starttls
-# s.enable_starttls = true
-# s.enable_tls = true
-# s.enable_starttls_auto = true
-# s.ssl = true
-# s.tls = true
-#sp.start('smtp.gmail.com', 587, 'localhost', vault_credentials[ENV['VAULT_USER'].to_sym], vault_credentials[ENV['VAULT_PASS'].to_sym], :login) do |smtp|
-# smtp.enable_starttls
-# smtp.enable_starttls_auto
-# smtp.starttls
-# smtp.enable_tls
-# smtp.starttls
 s = Net::SMTP.new("smtp.gmail.com", 587)
 s.enable_starttls
 sp = s.start('daveramsey.com', vault_credentials[ENV['VAULT_USER'].to_sym], vault_credentials[ENV['VAULT_PASS'].to_sym], :login)
