@@ -29,11 +29,13 @@ Mail.defaults do
     address: ENV['EMAIL_HOST'],
     port: ENV['EMAIL_PORT'],
     domain: ENV['EMAIL_DOMAIN'],
-    user_name: vault_credentials[ENV['VAULT_USER'].to_sym],
-    password: vault_credentials[ENV['VAULT_PASS'].to_sym],
+    #user_name: vault_credentials[ENV['VAULT_USER'].to_sym],
+    #password: vault_credentials[ENV['VAULT_PASS'].to_sym],
+    user_name: '',
+    password: '',
     authentication: ENV["EMAIL_AUTH_TYPE"],
     enable_starttls_auto: true,
-    ssl: true,
+    ssl: true
   }
 end
 
