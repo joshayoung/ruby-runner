@@ -9,6 +9,7 @@ gem "vault"
 gem "request_store"
 gem "dotenv"
 gem "dry-monads"
+gem "dry-initializer"
 
 group :development, :test do
   gem "byebug", platforms: %i(mri mingw x64_mingw)
