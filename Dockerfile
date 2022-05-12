@@ -7,7 +7,8 @@ WORKDIR /app
 COPY Gemfile ./
 
 # Private Gemfile:
-COPY scripts/Gemfile scripts/Gemfile
+# Adding the '*' here makes this an option copy. I have to have an actual file that exists before this, hence the '.keep':
+COPY scripts/.keep scripts/Gemfile* scripts/Gemfile
 
 RUN bundle install
 RUN BUNDLE_GEMFILE=scripts/Gemfile bundle install

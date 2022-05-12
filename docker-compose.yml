@@ -6,8 +6,8 @@ services:
     container_name: ruby_runner_container
     image: ruby_runner
     tty: true
-    env_file:
-      .env
+    # env_file:
+    #   .env
     volumes:
       - type: bind
         source: "${PWD}"

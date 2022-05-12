@@ -1,5 +1,8 @@
 # ruby-runner
 
+### Run bundle locally
+* `bundle`
+
 ## Wither docker-compose
 ### Build the container:
 * `docker-compose build`
